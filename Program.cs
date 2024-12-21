@@ -8,6 +8,7 @@ using System.Xml;
 using System.Collections;
 using System.Text.RegularExpressions;
 using System.Xml.Schema;
+using System.Diagnostics;
 
 namespace adventofcode2024_1
 {
@@ -21,6 +22,8 @@ namespace adventofcode2024_1
             ChallengeTwo();
             Console.WriteLine("\nC3:");
             ChallengeThree();
+            Console.WriteLine("\nC4:");
+            ChallengeFour();
         }
 
         static void ChallengeOne()
@@ -29,7 +32,7 @@ namespace adventofcode2024_1
             List<int> list1 = new List<int>();
             int total = 0;
 
-            StreamReader sr = new StreamReader("input1.txt");
+            StreamReader sr = new StreamReader("D:\\0.College\\Computer Science\\programs\\adventofcode24\\input1.txt");
             while (!sr.EndOfStream)
             {
                 string[] data = sr.ReadLine().Split(' ');
@@ -48,7 +51,7 @@ namespace adventofcode2024_1
 
         static void ChallengeTwo()
         {
-            StreamReader sr = new StreamReader("input2.txt");
+            StreamReader sr = new StreamReader("D:\\0.College\\Computer Science\\programs\\adventofcode24\\input2.txt");
             string[] originalData = new string[] { "test" };
             int totalSafe = 0;
 
@@ -81,7 +84,7 @@ namespace adventofcode2024_1
 
         static void ChallengeThree()
         {
-            StreamReader sr = new StreamReader("input3.txt");
+            StreamReader sr = new StreamReader("D:\\0.College\\Computer Science\\programs\\adventofcode24\\input3.txt");
             Regex rg1 = new Regex(@"mul\((\d|\d\d|\d\d\d),(\d|\d\d|\d\d\d)\)");
             Regex rg2 = new Regex(@"\d+");
             int total = 0;
@@ -94,6 +97,81 @@ namespace adventofcode2024_1
                 {
                     var operands = rg2.Matches(Convert.ToString(instructions[i]));
                     total += Convert.ToInt32(Convert.ToString(operands[0])) * Convert.ToInt32(Convert.ToString(operands[1]));
+                }
+            }
+            Console.WriteLine(total);
+        }
+        static void ChallengeFour()
+        {
+            StreamReader sr = new StreamReader("D:\\0.College\\Computer Science\\programs\\adventofcode24\\input4.txt");
+            List<List<string>> list = new List<List<string>>();
+            int total = 0;
+            int k = 0;
+
+            while (!sr.EndOfStream)
+            {
+                list.Add(new List<string>());
+                string data = sr.ReadLine();
+                for (int i = 0; i < data.Length; i++)
+                {
+                    list[k].Add(data.Substring(i, 1));
+                }
+                k++;
+            }
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                for (int j = 0; j < list[i].Count; j++)
+                {
+                    Console.Write(list[i][j]);
+                }
+                Console.WriteLine();
+            }
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                for (int j = 0; j < list[i].Count; j++)
+                {
+                    try
+                    {
+                        if (list[i][j] == "X" && list[i + 1][j] == "M" && list[i + 2][j] == "A" && list[i + 3][j] == "S") { total++; }
+                    }
+                    catch {}
+                    try
+                    {
+                        if (list[i][j] == "X" && list[i - 1][j] == "M" && list[i - 2][j] == "A" && list[i - 3][j] == "S") { total++; }
+                    }
+                    catch {}
+                    try
+                    {
+                        if (list[i][j] == "X" && list[i][j + 1] == "M" && list[i][j + 2] == "A" && list[i][j + 3] == "S") { total++; }
+                    }
+                    catch { }
+                    try
+                    {
+                        if (list[i][j] == "X" && list[i][j - 1] == "M" && list[i][j - 2] == "A" && list[i][j - 3] == "S") { total++; }
+                    }
+                    catch { }
+                    try
+                    {
+                        if (list[i][j] == "X" && list[i + 1][j + 1] == "M" && list[i + 2][j + 2] == "A" && list[i + 3][j + 3] == "S") { total++; }
+                    }
+                    catch { }
+                    try
+                    {
+                        if (list[i][j] == "X" && list[i + 1][j - 1] == "M" && list[i + 2][j - 2] == "A" && list[i + 3][j - 3] == "S") { total++; }
+                    }
+                    catch { }
+                    try
+                    {
+                        if (list[i][j] == "X" && list[i - 1][j - 1] == "M" && list[i - 2][j - 2] == "A" && list[i - 3][j - 3] == "S") { total++; }
+                    }
+                    catch { }
+                    try
+                    {
+                        if (list[i][j] == "X" && list[i - 1][j + 1] == "M" && list[i - 2][j + 2] == "A" && list[i - 3][j + 3] == "S") { total++; }
+                    }
+                    catch { }
                 }
             }
             Console.WriteLine(total);

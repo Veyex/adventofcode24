@@ -12,3 +12,18 @@
 /home/adam/repos/adventofcode24/obj/Debug/net8.0/adventofcode24.pdb
 /home/adam/repos/adventofcode24/obj/Debug/net8.0/adventofcode24.genruntimeconfig.cache
 /home/adam/repos/adventofcode24/obj/Debug/net8.0/ref/adventofcode24.dll
+D:\0.College\Computer Science\programs\adventofcode24\bin\Debug\net8.0\adventofcode24.exe
+D:\0.College\Computer Science\programs\adventofcode24\bin\Debug\net8.0\adventofcode24.deps.json
+D:\0.College\Computer Science\programs\adventofcode24\bin\Debug\net8.0\adventofcode24.runtimeconfig.json
+D:\0.College\Computer Science\programs\adventofcode24\bin\Debug\net8.0\adventofcode24.dll
+D:\0.College\Computer Science\programs\adventofcode24\bin\Debug\net8.0\adventofcode24.pdb
+D:\0.College\Computer Science\programs\adventofcode24\obj\Debug\net8.0\adventofcode24.GeneratedMSBuildEditorConfig.editorconfig
+D:\0.College\Computer Science\programs\adventofcode24\obj\Debug\net8.0\adventofcode24.AssemblyInfoInputs.cache
+D:\0.College\Computer Science\programs\adventofcode24\obj\Debug\net8.0\adventofcode24.AssemblyInfo.cs
+D:\0.College\Computer Science\programs\adventofcode24\obj\Debug\net8.0\adventofcode24.csproj.CoreCompileInputs.cache
+D:\0.College\Computer Science\programs\adventofcode24\obj\Debug\net8.0\adventofcode24.sourcelink.json
+D:\0.College\Computer Science\programs\adventofcode24\obj\Debug\net8.0\adventofcode24.dll
+D:\0.College\Computer Science\programs\adventofcode24\obj\Debug\net8.0\refint\adventofcode24.dll
+D:\0.College\Computer Science\programs\adventofcode24\obj\Debug\net8.0\adventofcode24.pdb
+D:\0.College\Computer Science\programs\adventofcode24\obj\Debug\net8.0\adventofcode24.genruntimeconfig.cache
+D:\0.College\Computer Science\programs\adventofcode24\obj\Debug\net8.0\ref\adventofcode24.dll
